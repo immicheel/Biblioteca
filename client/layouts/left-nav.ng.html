@@ -1,0 +1,58 @@
+<nav>
+	<ul data-smart-menu>
+		<li data-ui-sref-active="active">
+			<a  ui-sref="root.home" title="Perfil">
+				<i class="fa fa-lg fa-fw fa-user"></i>
+				<span class="menu-item-parent">Perfil</span>
+			</a>
+		</li>
+		
+		
+		<!-- sADMIN	-->
+		
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'sAdmin'" ui-sref="root.libros" title="Libros">
+				<i class="fa fa-lg fa-fw fa-book"></i>
+				<span class="menu-item-child">Libros</span>
+			</a>
+		</li>
+		<li data-ui-sref-active="active">
+				<a ng-show="currentUser.roles[0] == 'sAdmin'" ui-sref="root.categorias" title="Categorias">
+					<i class="fa fa-lg fa-fw fa-book"></i>
+					<span class="menu-item-child">Categorías</span>
+				</a>
+			</li>
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'sAdmin'" ui-sref="root.listaAdministradores" title="Administradores">
+				<i class="fa fa-lg fa-fw fa-building"></i>
+				<span class="menu-item-child">Administradores</span>
+			</a>
+		</li>
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'Administrador'" ui-sref="" title="Administradores">
+				<i class="fa fa-lg fa-fw fa-book"></i>
+				<span class="menu-item-child">Préstamos</span>
+			</a>
+		</li>
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'Administrador'" ui-sref="" title="Administradores">
+				<i class="fa fa-lg fa-fw fa-book"></i>
+				<span class="menu-item-child">Devoluciones</span>
+			</a>
+		</li>
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'Administrador'" ui-sref="" title="Administradores">
+				<i class="fa fa-lg fa-fw fa-list"></i>
+				<span class="menu-item-child">Reportes</span>
+			</a>
+		</li>
+		
+	<li data-ui-sref-active="active">
+			<a ui-sref="anon.logout" title="Cerrar Sesión">
+				<i class="fa fa-sign-{{ro.isLoggedIn() ? 'out' : 'in'}}"></i>
+					<span class="menu-item-child">Cerrar Sesión</span>
+
+			</a>	
+		</li>
+</ul>
+</nav>

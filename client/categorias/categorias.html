@@ -1,0 +1,59 @@
+<title>Categorías</title>
+
+<h2>Categorías</h2>
+<div class="row">
+	<div class="col-sm-12">
+		<button type="button" href="#Agregar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" ng-click="cat.Nuevo()" class="btn btn-{{cat.nuevo == true ? 'success' : 'danger'}}">{{cat.nuevo == true ? 'Nuevo' : 'Cancelar'}}</button>
+		<div class="collapse" id="Agregar">
+		</br>
+			<form name="form" class="form-horizontal" role="form">
+		  	<div class="well">	   
+			    <div class="row">
+			    	<div class="col-sm-12">					    
+							<div class="col-sm-9" valida>
+							<label>Categoría</label>
+							<input name="nombreCategoria" type="text" class="form-control" placeholder="Categoria" ng-model="cat.categoria.nombreCategoria" required>
+							</div>
+							<h6>&nbsp;</h6>					    
+					  </div>
+					</div>
+					<br>
+			    <div class="row">
+						<div class="col-sm-12">
+							<input type="submit" ng-click="cat.guardar(cat.categoria,form)" value="Guardar" class="btn btn-info" ng-show="cat.action" valida-form formulario="form">
+							<input type="submit" ng-click="cat.actualizar(cat.categoria,form)" value="Actualizar" class="btn btn-info" ng-show="!cat.action" valida-form formulario="form">	
+						</div>
+					</div>
+		  	</div>  
+		  </form>
+		</div>
+	</div>
+</div>
+<br/>
+
+
+
+<!-- List -->
+<div class="well">
+<br>
+	<div class="row">
+		<div class="col-sm-12">
+			<table class="table table-bordered">
+				<thead>
+					<tr>					
+						<th width="37%"><div class="text-center">Nombre</div></th>
+						<th width="12%"><div class="text-center">Acciones</div></th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="categoria in cat.categorias">
+					<td>{{categoria.nombreCategoria}}</td>
+						<td class="text-center">
+							<button type="button" class="btn btn-info" title="Editar" ng-click="cat.editar(cat._id)"><i class="fa fa-pencil"></i></a></li></button>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
