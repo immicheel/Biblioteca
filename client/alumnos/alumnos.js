@@ -82,15 +82,4 @@ angular
 			Libros.update({_id: id},{$set :  {libro : libro.estatus}});
 	};	
 	
-	$(document).ready(function(){
-    $('#periodo').change(
-        function () {
-            var periodo = $('option:selected', this).text();
-            if (periodo == "Trimestral") {
-                $('#numero').text("Número de Trimestre *");
-            } else if (periodo == "Semestral") {
-                $('#numero').html("Número de Semestre *");
-            }
-        });
- }); 
 };

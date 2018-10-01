@@ -30,8 +30,8 @@
 					<br>
 			    <div class="row">
 						<div class="col-sm-12">
-							<input type="submit" ng-click="unid.guardar(unid.unidad,form)" value="Guardar" class="btn btn-info" ng-show="unid.action" valida-form formulario="form">
-							<input type="submit" ng-click="unid.actualizar(unid.unidad,form)" value="Actualizar" class="btn btn-info" ng-show="!unid.action" valida-form formulario="form">	
+							<input type="submit" ng-click="unid.guardar(unid.unidad,form)" value="Guardar" class="btn btn-xs btn-info"" ng-show="unid.action" valida-form formulario="form">
+							<input type="submit" ng-click="unid.actualizar(unid.unidad,form)" value="Actualizar" class="btn btn-xs btn-info"" ng-show="!unid.action" valida-form formulario="form">	
 						</div>
 					</div>
 		  	</div>  
@@ -58,7 +58,7 @@
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Buscar..."  disabled>
 								<span class="input-group-btn">
-									<button class="btn btn-info"  type="button" disabled>Buscar</button>
+									<button class="btn btn-xs btn-info""  type="button" disabled>Buscar</button>
 								</span>
 							</div>
 					</div>			
@@ -93,7 +93,7 @@
 						</div>
 					</td>
 						<td class="text-center">
-							<button type="button" class="btn btn-info" title="Editar" ng-click="unid.editar(unidad._id)"><i class="fa fa-pencil"></i></a></li></button>
+							<button type="button" class="btn btn-xs btn-info"" title="Editar" ng-click="unid.editar(unidad._id)"><i class="fa fa-pencil"></i></a></li></button>
 							<button type="button" class="btn btn-{{unidad.estatus ? 'danger' : 'success' }}" title="{{unidad.estatus ? 'Desactivar' : 'Activar' }}" ng-click="unid.cambiarEstatus(unidad._id)"><i class="fa fa-{{unidad.estatus ? 'times' : 'check' }}"></i></a></button>	    
 					</td>
 				</tr>

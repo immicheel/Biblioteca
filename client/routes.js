@@ -108,7 +108,7 @@ angular.module('planeacion').config(['$injector', function ($injector) {
     .state('root.alumnos', {
 			url: '/alumnos',
 			templateUrl: 'client/alumnos/alumnos.html',
-			controller: 'AlumnosCtrl as alumnos',
+			controller: 'AlumnosCtrl as alum',
 			resolve: {
 				"currentUser": ["$meteor", function($meteor){
           return $meteor.requireUser();
@@ -116,126 +116,126 @@ angular.module('planeacion').config(['$injector', function ($injector) {
 			}
     })
     
-    .state('root.unidades', {
-      url: '/unidades',
-      templateUrl: 'client/unidades/unidades.ng.html',
-      controller: 'UnidadesCtrl as unid',
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    }
-    })
-    .state('root.departamentos', {
-      url: '/departamentos',
-      templateUrl: 'client/departamentos/departamentos.ng.html',
-      controller: 'DepartamentosCtrl as depa',
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    }
-    })
-    .state('root.programasEducativos', {
-      url: '/programasEducativos',
-      templateUrl: 'client/programasEducativos/programasEducativos.ng.html',
-      controller: 'ProgramasEducativosCtrl as proe',
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    }
-    })
-    .state('root.planEstudio', {
-      url: '/planEstudio',
-      templateUrl: 'client/planEstudio/planEstudio.html',
-      controller: 'PlanesdeEstudioCtrl as plae',
-      resolve: {
-        "currentUser": ["$meteor", function($meteor){
-          return $meteor.requireUser();
-          }]
-      }
-    })
+    // .state('root.unidades', {
+    //   url: '/unidades',
+    //   templateUrl: 'client/unidades/unidades.ng.html',
+    //   controller: 'UnidadesCtrl as unid',
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   }
+    // })
+    // .state('root.departamentos', {
+    //   url: '/departamentos',
+    //   templateUrl: 'client/departamentos/departamentos.ng.html',
+    //   controller: 'DepartamentosCtrl as depa',
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   }
+    // })
+    // .state('root.programasEducativos', {
+    //   url: '/programasEducativos',
+    //   templateUrl: 'client/programasEducativos/programasEducativos.ng.html',
+    //   controller: 'ProgramasEducativosCtrl as proe',
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   }
+    // })
+    // .state('root.planEstudio', {
+    //   url: '/planEstudio',
+    //   templateUrl: 'client/planEstudio/planEstudio.html',
+    //   controller: 'PlanesdeEstudioCtrl as plae',
+    //   resolve: {
+    //     "currentUser": ["$meteor", function($meteor){
+    //       return $meteor.requireUser();
+    //       }]
+    //   }
+    // })
     
-    .state('root.listamaestros', {
-      url: '/listamaestros',
-      templateUrl: 'client/listamaestros/listamaestros.html',      
-      controller: 'ListaMaestrosCtrl as lmc',
-      ncyBreadcrumb: {
-		    label: "Maestros"
-		  },
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    },
-    })
+    // .state('root.listamaestros', {
+    //   url: '/listamaestros',
+    //   templateUrl: 'client/listamaestros/listamaestros.html',      
+    //   controller: 'ListaMaestrosCtrl as lmc',
+    //   ncyBreadcrumb: {
+		//     label: "Maestros"
+		//   },
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   },
+    // })
    
-    .state('root.maestros', {
-      url: '/maestros',
-      templateUrl: 'client/maestros/maestros.html',      
-      controller: 'MaestrosCtrl as mc',
-      ncyBreadcrumb: {
-		    label: "Maestros"
-		  },
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    },
-    })
-    .state('root.editarMaestro', {
-      url: '/editarMaestro/:id,:pantallaAnterior',
-      templateUrl: 'client/maestros/maestros.html',      
-      controller: 'MaestrosCtrl as mc',
-      ncyBreadcrumb: {
-        label: "Maestros"
-      },
-      resolve: {
-        "currentUser": ["$meteor", function($meteor){
-          return $meteor.requireUser();
-        }]
-      },
-    })
+    // .state('root.maestros', {
+    //   url: '/maestros',
+    //   templateUrl: 'client/maestros/maestros.html',      
+    //   controller: 'MaestrosCtrl as mc',
+    //   ncyBreadcrumb: {
+		//     label: "Maestros"
+		//   },
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   },
+    // })
+    // .state('root.editarMaestro', {
+    //   url: '/editarMaestro/:id,:pantallaAnterior',
+    //   templateUrl: 'client/maestros/maestros.html',      
+    //   controller: 'MaestrosCtrl as mc',
+    //   ncyBreadcrumb: {
+    //     label: "Maestros"
+    //   },
+    //   resolve: {
+    //     "currentUser": ["$meteor", function($meteor){
+    //       return $meteor.requireUser();
+    //     }]
+    //   },
+    // })
 
     
-    .state('root.listacoordinadores', {
-      url: '/listacoordinadores',
-      templateUrl: 'client/coordinadores/listacoordinadores.html',      
-      controller: 'ListaCoordinadoresCtrl as lcc',
-      ncyBreadcrumb: {
-		    label: "Coordinadores"
-		  },
-      resolve: {
-	      "currentUser": ["$meteor", function($meteor){
-	        return $meteor.requireUser();
-	      }]
-	    },
-    }) 
-    .state('root.coordinadores', {
-      url: '/coordinadores',
-      templateUrl: 'client/coordinadores/coordinadores.html',      
-      controller: 'CoordinadoresCtrl as cc',
-      resolve: {
-        "currentUser": ["$meteor", function($meteor){
-          return $meteor.requireUser();
-        }]
-      },
-    })
+    // .state('root.listacoordinadores', {
+    //   url: '/listacoordinadores',
+    //   templateUrl: 'client/coordinadores/listacoordinadores.html',      
+    //   controller: 'ListaCoordinadoresCtrl as lcc',
+    //   ncyBreadcrumb: {
+		//     label: "Coordinadores"
+		//   },
+    //   resolve: {
+	  //     "currentUser": ["$meteor", function($meteor){
+	  //       return $meteor.requireUser();
+	  //     }]
+	  //   },
+    // }) 
+    // .state('root.coordinadores', {
+    //   url: '/coordinadores',
+    //   templateUrl: 'client/coordinadores/coordinadores.html',      
+    //   controller: 'CoordinadoresCtrl as cc',
+    //   resolve: {
+    //     "currentUser": ["$meteor", function($meteor){
+    //       return $meteor.requireUser();
+    //     }]
+    //   },
+    // })
 
-    .state('root.editarCoordinador', {
-      url: '/coordinadores/:id,:pantallaAnterior',
-      templateUrl: 'client/coordinadores/coordinadores.html',      
-      controller: 'CoordinadoresCtrl as cc',
-      ncyBreadcrumb: {
-        label: "Coordinadores"
-      },
-      resolve: {
-        "currentUser": ["$meteor", function($meteor){
-          return $meteor.requireUser();
-        }]
-      },
-    })
+    // .state('root.editarCoordinador', {
+    //   url: '/coordinadores/:id,:pantallaAnterior',
+    //   templateUrl: 'client/coordinadores/coordinadores.html',      
+    //   controller: 'CoordinadoresCtrl as cc',
+    //   ncyBreadcrumb: {
+    //     label: "Coordinadores"
+    //   },
+    //   resolve: {
+    //     "currentUser": ["$meteor", function($meteor){
+    //       return $meteor.requireUser();
+    //     }]
+    //   },
+    // })
 
     .state('root.listaAdministradores', {
       url: '/listaAdministradores',

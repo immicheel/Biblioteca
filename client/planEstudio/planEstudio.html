@@ -45,8 +45,8 @@
 				<br>
 			    <div class="row">
 					<div class="col-sm-12">
-						<input type="submit" ng-click="plae.guardar(plae.plandeEstudio,form)" value="Guardar" class="btn btn-info" ng-show="plae.action" valida-form formulario="form">
-						<input type="submit" ng-click="plae.actualizar(plae.plandeEstudio,form)" value="Actualizar" class="btn btn-info" ng-show="!plae.action" valida-form formulario="form">	
+						<input type="submit" ng-click="plae.guardar(plae.plandeEstudio,form)" value="Guardar" class="btn btn-xs btn-info"" ng-show="plae.action" valida-form formulario="form">
+						<input type="submit" ng-click="plae.actualizar(plae.plandeEstudio,form)" value="Actualizar" class="btn btn-xs btn-info"" ng-show="!plae.action" valida-form formulario="form">	
 					</div>
 				</div>
 		  	</div>  
@@ -69,7 +69,7 @@
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Buscar..."  disabled>
 								<span class="input-group-btn">
-									<button class="btn btn-info"  type="button" disabled>Buscar</button>
+									<button class="btn btn-xs btn-info""  type="button" disabled>Buscar</button>
 								</span>
 							</div>
 					</div>			
@@ -95,8 +95,8 @@
 					<td>{{plandeEstudio.tipoPlandeEstudio}}</td>
 					<td class="materiasMostrar" hidden><p>{{plae.ObtenerMaterias(plandeEstudio.Materias)}}</p></td>
 					<td class="text-center">
-							<button type="button" class="btn btn-info" onclick="toggleraro()" title="Mostrar Materias" id="btnMostrarMaterias"><i class="fa fa-eye"></i></button>
-							<button type="button" class="btn btn-info" title="Editar" ng-click="plae.editar(plandeEstudio._id)"><i class="fa fa-pencil"></i></a></li></button>
+							<button type="button" class="btn btn-xs btn-info"" onclick="toggleraro()" title="Mostrar Materias" id="btnMostrarMaterias"><i class="fa fa-eye"></i></button>
+							<button type="button" class="btn btn-xs btn-info"" title="Editar" ng-click="plae.editar(plandeEstudio._id)"><i class="fa fa-pencil"></i></a></li></button>
 					</td>
 				</tr>
 				</tbody>
