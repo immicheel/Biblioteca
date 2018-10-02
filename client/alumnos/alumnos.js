@@ -73,13 +73,13 @@ angular
 
 	this.cambiarEstatus = function(id)
 	{
-			var libro = Libros.findOne({_id:id});
+			var libro = Alumnos.findOne({_id:id});
 			if(libro.estatus == true)
 				libro.estatus = false;
 			else
 				libro.estatus = true;
 			
-			Libros.update({_id: id},{$set :  {libro : libro.estatus}});
+			Alumnos.update({_id: id},{$set :  {libro : libro.estatus}});
 	};	
 	
 };

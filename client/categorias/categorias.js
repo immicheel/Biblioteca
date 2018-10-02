@@ -59,15 +59,15 @@ angular
 			if(form.$invalid){
 		        toastr.error('Error al actualizar los datos.');
 		        return;
-		  }
-			var idTemp = categoria._id;
-			delete categoria._id;		
+		  	}
 			categoria.usuarioActualizo = Meteor.userId(); 
-			Categorias.update({_id:idTemp},{$set : categorias});
+			Categorias.update({_id:categoria._id},{$set: categoria});
 			toastr.success('Actualizado correctamente.');
 			$('.collapse').collapse('hide');
 			this.nuevo = true;
 			form.$setPristine();
       form.$setUntouched();
 	};
+
+
 };

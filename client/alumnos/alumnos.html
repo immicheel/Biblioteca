@@ -29,20 +29,16 @@
                                 <input name="grupo" type="text" class="form-control" placeholder="Grupo" ng-model="alum.alumno.grupo" required
                                  capitalize>
                                 </div>
-                                <div class="col-sm-3" valida>
-                                <label>Teléfono</label>
-                                <input name="telefono" type="number" class="form-control" placeholder="Teléfono" ng-model="alumn.alumno.telefono" required
-                                 capitalize>
-                                </div>								
+                              							
 						</div>
 					</div>
     				</div>
 					<br>
 					<div class="row">
 						<div class="col-sm-12">
-							<input type="submit" ng-click="alum.guardar(alum.alumno,form)" value="Guardar" class="btn btn-xs btn-info"" ng-show="alum.action"
+							<input type="submit" ng-click="alum.guardar(alum.alumno,form)" value="Guardar" class="btn btn-info"" ng-show="alum.action"
 							 valida-form formulario="form">
-							<input type="submit" ng-click="alum.actualizar(alum.alumno,form)" value="Actualizar" class="btn btn-xs btn-info"" ng-show="!alum.action"
+							<input type="submit" ng-click="alum.actualizar(alum.alumno,form)" value="Actualizar" class="btn btn-info"" ng-show="!alum.action"
 							 valida-form formulario="form">
 						</div>
 					</div>
@@ -89,9 +85,6 @@
 					<th width="8%">
 						<div class="text-center">Grupo</div>
 					</th>
-					<th width="5%">
-						<div class="text-center">Teléfono</div>
-					</th>
 					<th width="10%">
 						<div class="text-center">
 							Acciones
@@ -103,9 +96,9 @@
 				
 				<tr ng-repeat="alumno in alum.alumnos">
 					<td>{{alumno.matricula}}</td>
-					<td>{{alumno.nombre}}</td>
+					<td>{{alumno.nombreAlumno}}</td>
 					<td>{{alumno.grupo}}</td>
-					<td>{{alumno.telefono}}</td>
+				
 					
 					<td class="text-center">
 						<button type="button" class="btn btn-xs btn-info" title="Editar" ng-click="alum.editar(alumno._id)"><i class="fa fa-pencil"></i></a></li></button>

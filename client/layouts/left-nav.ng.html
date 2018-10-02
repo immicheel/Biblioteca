@@ -46,6 +46,14 @@
 				<span class="menu-item-child">Reportes</span>
 			</a>
 		</li>
+		<li data-ui-sref-active="active">
+			<a ng-show="currentUser.roles[0] == 'Administrador'" ui-sref="root.alumnos" title="Administradores">
+				<i class="fa fa-lg fa-fw fa-users"></i>
+				<span class="menu-item-child">Alumnos</span>
+			</a>
+		</li>
+		
+
 		
 	<li data-ui-sref-active="active">
 			<a ui-sref="anon.logout" title="Cerrar Sesión">
