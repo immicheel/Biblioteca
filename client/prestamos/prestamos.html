@@ -1,0 +1,125 @@
+<title>Préstamo</title>
+
+<h2>Préstamos</h2>
+<div class="row">
+	<div class="col-sm-12">
+		<button type="button" href="#Agregar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" ng-click="pres.Nuevo()" class="btn btn-{{pres.nuevo == true ? 'success' : 'danger'}}">{{pres.nuevo == true ? 'Nuevo' : 'Cancelar'}}</button>
+		<div class="collapse" id="Agregar">
+			</br>
+			<form name="form" class="form-horizontal" role="form">
+				<div class="well">
+						<legend>Datos del Préstamo</legend> 
+							<div class="row">
+								<div class="col-sm-4" valida>
+									<label>Alumnos</label>
+									<select name="alumno" class="form-control select2" ng-model="pres.prestamo.alumno_id" required>
+									<option value disabled selected>Seleccionar Alumno...</option>
+									<option ng-repeat="alumno in pres.alumnos" value="{{alumno._id}}"> {{alumno.nombreAlumno}}</option>
+									</select>
+								</div>	
+								<div class="col-sm-4" valida>
+									<label>Libros</label>
+									<select name="libro" class="form-control select2" ng-model="pres.prestamo.libro_id" required>
+									<option value disabled selected>Seleccionar Libro...</option>
+									<option ng-repeat="libro in pres.libros" value="{{libro._id}}"> {{libro.nombreLibro}}</option>
+									</select>
+								</div>	
+							</div>
+					<label>&nbsp;</label>
+					<div class="row">
+						<div class="col-sm-3" valida>
+						<label>Fecha Préstamo</label>
+						<input name="fechaPrestamo" type="date" class="form-control" placeholder="Fecha" ng-model="pres.prestamo.fechap" required
+							capitalize>
+						</div>
+						<div class="col-sm-3" valida>
+						<label>Fecha Devolución</label>
+						<input name="fechaDevolucion" type="date" class="form-control" placeholder="Fecha" ng-model="pres.prestamo.fechad" required
+						capitalize>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-sm-12">
+							<input type="submit" ng-click="pres.guardar(pres.prestamo,form)" value="Guardar" class="btn btn-info"" ng-show="pres.action"
+							 valida-form formulario="form">
+							<input type="submit" ng-click="pres.actualizar(pres.prestamo,form)" value="Actualizar" class="btn btn-info"" ng-show="!pres.action"
+							 valida-form formulario="form">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<br/>
+<div class="well">
+	<div class="row">
+			<div class="col-sm-12">	
+				<div class="col-sm-3">
+					<label>Filtrar por...</label>
+					<select name="OBJETO" class="form-control"  disabled>
+						<option value abled selected>Seleccionar</option>
+					</select>
+				</div>
+				<div class="col-sm-9">
+						<label>&nbsp;</label>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Buscar..."  disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-info""  type="button" disabled>Buscar</button>
+							</span>
+						</div>
+				</div>			
+			</div>
+		</div>
+		<br>
+<div class="row">
+<div class="col-sm-12">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th width="5%">
+					<div class="text-center">No.</div>
+				</th>
+				<th width="5%">
+					<div class="text-center">Alumno</div>
+				</th>
+				<th width="25%">
+					<div class="text-center">Libro</div>
+				</th>
+				<th width="25%">
+					<div class="text-center">Fecha Préstamo</div>
+				</th>
+				<th width="25%">
+					<div class="text-center">Fecha Devolución</div>
+				</th>
+				
+				<th width="10%">
+					<div class="text-center">
+						Acciones
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr ng-repeat="prestamo in pres.prestamos">
+				<td>{{$index + 1}}</td>
+				<td>{{pres.getAlumno(prestamo.alumno_id)}}</td>
+				<td>{{pres.getLibro(prestamo.libro_id)}}</td>
+				<td>{{prestamo.fechap}}</td>
+				<td>{{prestamo.fechad}}</td>
+				
+				
+				
+				
+				<td class="text-center">
+					<button type="button" class="btn btn-xs btn-info" title="Editar" ng-click="pres.editar(prestamo._id)"><i class="fa fa-pencil"></i></a></li></button>
+					<button type="button" class="btn btn-xs btn-{{pres.estatus ? 'danger' : 'success' }}" title="{{pres.estatus ? 'Desactivar' : 'Activar' }}" ng-click="pres.cambiarEstatus(prestamo._id)"><i class="fa fa-{{prestamo.estatus ? 'times' : 'check' }}"></i></a></button>	     
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>

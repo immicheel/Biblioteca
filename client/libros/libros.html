@@ -18,7 +18,7 @@
 								</div>
 								<div class="col-sm-9" valida>
 								<label>Nombre del Libro</label>
-								<input name="nombreLibro" type="text" class="form-control" placeholder="Nombre" ng-model="lib.libro.nombre" required
+								<input name="nombreLibro" type="text" class="form-control" placeholder="Nombre" ng-model="lib.libro.nombreLibro" required
 								 capitalize>
                                  </div>                         
 						</div>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-sm-3" valida>
                                 <label>Año</label>
-                                <input name="anoLibro" type="text" class="form-control" placeholder="Año" ng-model="lib.libro.ano" required
+                                <input name="anoLibro" type="number" class="form-control" placeholder="Año" ng-model="lib.libro.ano" required
                                  capitalize>
 								</div> 
 								
@@ -115,6 +115,9 @@
 			<thead>
 				<tr>
 					<th width="5%">
+						<div class="text-center">No</div>
+					</th>
+					<th width="5%">
 						<div class="text-center">Clave</div>
 					</th>
 					<th width="25%">
@@ -151,8 +154,9 @@
 			<tbody>
 				
 				<tr ng-repeat="libro in lib.libros">
+					<td>{{$index + 1}}</td>
 					<td>{{libro.clvLibro}}</td>
-					<td>{{libro.nombre}}</td>
+					<td>{{libro.nombreLibro}}</td>
 					<td>{{libro.autor}}</td>
 					<td>{{libro.editorial}}</td>
                     <td>{{libro.paginas}}</td>

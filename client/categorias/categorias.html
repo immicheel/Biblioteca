@@ -40,13 +40,15 @@
 		<div class="col-sm-12">
 			<table class="table table-bordered">
 				<thead>
-					<tr>					
+					<tr>	
+							<th width="2%"><div class="text-center">No</div></th>				
 						<th width="37%"><div class="text-center">Nombre</div></th>
 						<th width="12%"><div class="text-center">Acciones</div></th>
 					</tr>
 				</thead>
 				<tbody>
 				<tr ng-repeat="categoria in cat.categorias">
+					<td>{{$index + 1}}</td>
 					<td>{{categoria.nombreCategoria}}</td>
 						<td class="text-center">
 							<button type="button" class="btn btn-xs btn-info"" title="Editar" ng-click="cat.editar(cat._id)"><i class="fa fa-pencil"></i></a></li></button>

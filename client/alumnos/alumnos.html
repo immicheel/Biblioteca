@@ -77,6 +77,9 @@
 			<thead>
 				<tr>
 					<th width="5%">
+						<div class="text-center">No</div>
+					</th>
+					<th width="5%">
 						<div class="text-center">Matricula</div>
 					</th>
 					<th width="25%">
@@ -95,6 +98,7 @@
 			<tbody>
 				
 				<tr ng-repeat="alumno in alum.alumnos">
+					<td>{{$index + 1}}</td>
 					<td>{{alumno.matricula}}</td>
 					<td>{{alumno.nombreAlumno}}</td>
 					<td>{{alumno.grupo}}</td>

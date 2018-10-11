@@ -59,11 +59,9 @@ angular
 			if(form.$invalid){
 		        toastr.error('Error al actualizar los datos.');
 		        return;
-		  }
-			var idTemp = alumno._id;
-			delete alumno._id;		
+		  	}
 			alumno.usuarioActualizo = Meteor.userId(); 
-			Alumno.update({_id:idTemp},{$set : alumnos});
+			Alumnos.update({_id:alumno._id},{$set: alumno});
 			toastr.success('Actualizado correctamente.');
 			$('.collapse').collapse('hide');
 			this.nuevo = true;
@@ -73,13 +71,13 @@ angular
 
 	this.cambiarEstatus = function(id)
 	{
-			var libro = Alumnos.findOne({_id:id});
-			if(libro.estatus == true)
-				libro.estatus = false;
+			var alumno = Alumnos.findOne({_id:id});
+			if(alumno.estatus == true)
+				alumno.estatus = false;
 			else
-				libro.estatus = true;
+				alumno.estatus = true;
 			
-			Alumnos.update({_id: id},{$set :  {libro : libro.estatus}});
+			Alumnos.update({_id: id},{$set :  {alumno : alumno.estatus}});
 	};	
 	
 };
