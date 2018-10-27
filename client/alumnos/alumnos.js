@@ -7,7 +7,9 @@ angular
   this.action = true;
   this.nuevo = true;	 
   this.alumno = {}; 
-  
+  this.alumnosTabla = [];
+
+
 	this.subscribe('alumnos',()=>{
 		return [{
 			
@@ -16,6 +18,7 @@ angular
 	 
 	this.helpers({
 	  alumnos : () => {
+		  alumnosTabla = Alumnos.find();
 		  return Alumnos.find();
 	  }
   }); 
@@ -33,6 +36,8 @@ angular
 		        toastr.error('Error al guardar los datos.');
 		        return;
 		  }
+
+		   
 			console.log(alumno);
 			alumno.estatus = true;
 			alumno.usuarioInserto = Meteor.userId();
@@ -66,7 +71,7 @@ angular
 			$('.collapse').collapse('hide');
 			this.nuevo = true;
 			form.$setPristine();
-      form.$setUntouched();
+      		form.$setUntouched();
 	};
 
 	this.cambiarEstatus = function(id)
@@ -80,4 +85,45 @@ angular
 			Alumnos.update({_id: id},{$set :  {alumno : alumno.estatus}});
 	};	
 	
+	
+	
+	$('#tablaAlumnos').dataTable({
+		data: Alumnos.find().fetch(),
+		language: {
+			"decimal": "",
+			"emptyTable": "No hay información",
+			"info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+			"infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+			"infoFiltered": "(Filtrado de _MAX_ total entradas)",
+			"infoPostFix": "",
+			"thousands": ",",
+			"lengthMenu": "Mostrar _MENU_ Entradas",
+			"loadingRecords": "Cargando...",
+			"processing": "Procesando...",
+			"search": "Buscar:",
+			"zeroRecords": "Sin resultados encontrados",
+			"paginate": {
+				"first": "Primero",
+				"last": "Ultimo",
+				"next": "Siguiente",
+				"previous": "Anterior"
+			}
+		},
+		columns: [
+			{ 
+				data: "matricula",				
+			
+			},
+			{ data: "nombreAlumno"},
+			{ data: "grupo"},
+			{
+				data: "_id",
+				render: function(data) {
+					return `<button type="button" class="btn btn-xs btn-info" title="Editar" ng-click="alum.editar(${data})"><i class="fa fa-pencil"></i></a></li></button>`
+				}
+			}
+		]
+	});
+
+
 };

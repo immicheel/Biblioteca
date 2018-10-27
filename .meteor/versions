@@ -40,6 +40,7 @@ ecmascript-runtime@0.3.15
 ejson@1.0.13
 email@1.1.18
 emdagon:bootstrap-multiselect@0.0.2
+ephemer:reactive-datatables@1.1.0
 fastclick@1.0.13
 fourseven:scss@3.13.0
 geojson-utils@1.0.10

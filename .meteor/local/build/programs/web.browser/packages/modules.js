@@ -211,19 +211,20 @@ install("jortizsao:isteven-angular-multiselect");                               
 install("phund:angularjs-dropdown-multiselect");                                                                       // 117
 install("emdagon:bootstrap-multiselect");                                                                              // 118
 install("zimme:select2-bootstrap3-css");                                                                               // 119
-install("webapp");                                                                                                     // 120
-install("livedata");                                                                                                   // 121
-install("hot-code-push");                                                                                              // 122
-install("launch-screen");                                                                                              // 123
-install("lai:collection-extensions");                                                                                  // 124
-install("dburles:mongo-collection-instances");                                                                         // 125
-install("benjamine:jsondiffpatch");                                                                                    // 126
-install("angular-meteor-data");                                                                                        // 127
-install("angular-templates");                                                                                          // 128
-install("pbastowski:angular-babel");                                                                                   // 129
-install("autoupdate");                                                                                                 // 130
-install("service-configuration");                                                                                      // 131
-                                                                                                                       // 132
+install("ephemer:reactive-datatables");                                                                                // 120
+install("webapp");                                                                                                     // 121
+install("livedata");                                                                                                   // 122
+install("hot-code-push");                                                                                              // 123
+install("launch-screen");                                                                                              // 124
+install("lai:collection-extensions");                                                                                  // 125
+install("dburles:mongo-collection-instances");                                                                         // 126
+install("benjamine:jsondiffpatch");                                                                                    // 127
+install("angular-meteor-data");                                                                                        // 128
+install("angular-templates");                                                                                          // 129
+install("pbastowski:angular-babel");                                                                                   // 130
+install("autoupdate");                                                                                                 // 131
+install("service-configuration");                                                                                      // 132
+                                                                                                                       // 133
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){

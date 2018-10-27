@@ -108,8 +108,8 @@
 				<td>{{$index + 1}}</td>
 				<td>{{pres.getAlumno(prestamo.alumno_id)}}</td>
 				<td>{{pres.getLibro(prestamo.libro_id)}}</td>
-				<td>{{prestamo.fechap}}</td>
-				<td>{{prestamo.fechad}}</td>
+				<td style="text-align: center;">{{prestamo.fechap | date: 'dd/MM/yyyy' }}</td>
+				<td>{{prestamo.fechad | date: 'dd/MM/yyyy'}}</td>
 				
 				
 				

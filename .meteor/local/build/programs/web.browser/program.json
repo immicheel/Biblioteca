@@ -51,9 +51,9 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/packages/modules.js?hash=6d7cb514cedc2b27ea545c16f518546e6d111c79",
-      "size": 1703751,
-      "hash": "6d7cb514cedc2b27ea545c16f518546e6d111c79"
+      "url": "/packages/modules.js?hash=ce88d6a5b22783675035a5c6d624bced19cb3cb4",
+      "size": 1703877,
+      "hash": "ce88d6a5b22783675035a5c6d624bced19cb3cb4"
     },
     {
       "path": "packages/promise.js",
@@ -808,6 +808,15 @@
       "hash": "b7dc37b1030016781000807dbeea724f60046a4b"
     },
     {
+      "path": "packages/ephemer_reactive-datatables.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/ephemer_reactive-datatables.js?hash=3f4ce318b44b2e4838a750d5b94ce471b4fc1be4",
+      "size": 95079,
+      "hash": "3f4ce318b44b2e4838a750d5b94ce471b4fc1be4"
+    },
+    {
       "path": "packages/webapp.js",
       "where": "client",
       "type": "js",
@@ -922,11 +931,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=ff7cd1616f60961c076de390532b4a64031dae76",
+      "url": "/app/app.js?hash=55c886fae732c3ad18d5038f3fb355637a41d56f",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/ff7cd1616f60961c076de390532b4a64031dae76.map",
-      "size": 587547,
-      "hash": "ff7cd1616f60961c076de390532b4a64031dae76"
+      "sourceMapUrl": "/app/55c886fae732c3ad18d5038f3fb355637a41d56f.map",
+      "size": 599774,
+      "hash": "55c886fae732c3ad18d5038f3fb355637a41d56f"
     },
     {
       "path": "packages/service-configuration.js",
